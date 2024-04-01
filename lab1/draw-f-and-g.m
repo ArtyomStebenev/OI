@@ -7,14 +7,12 @@ multiplication = f .* g;
 
 figure;
 plot(x(1:10:end), f(1:10:end), "-r; f(x);",
-     x(1:10:end), g(1:10:end), "-.b; g(x);",
-     x(1:30:end), summa(1:30:end), "dg;f(x) + g(x);",
-     x(1:15:end), multiplication(1:15:end), ":+m; f(x) .* g(x);");
-title("functions f(x) and g(x)");
+     x(1:10:end), g(1:10:end), "-.b; g(x);");
+title("f(x) and g(x)");
 
 figure;
-plot(x(1:10:end), real(f)(1:10:end), "-g; Re(f(x));",
-     x(1:10:end), imag(f)(1:10:end), "-m; Im(f(x));",
-     x(1:10:end), abs(f)(1:10:end), "-.r; Abs(f(x));",
-     x(1:10:end), arg(f)(1:10:end), ".b; Arg(f(x));");
-title("f(x)");
+plot(x(1:30:end), summa(1:30:end), "dg;f(x) + g(x);");
+
+figure;
+plot(x(1:15:end), multiplication(1:15:end), ":+m; f(x) .* g(x);");
+
