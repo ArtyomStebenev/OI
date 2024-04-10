@@ -1,9 +1,9 @@
 #10
-F = Kernel * f' * step;
+F = Kernel * f.' * step;
 
-imagesc(x, z, real(F));
+plot(z, real(F));
 figure;
-imagesc(x, z, abs(F));
+plot(z, abs(F));
 figure;
-imagesc(x, z, arg(F));
+plot(z, arg(F));
 

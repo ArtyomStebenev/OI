@@ -1,7 +1,7 @@
 #13
-R_Kernel = exp(i * 2 * pi * X .* Z);
+R_Kernel = Kernel';
 
-Revers_F = F' * R_Kernel * height;
+Revers_F = R_Kernel * F * height;
 
 plot(x, real(Revers_F));
 figure;
