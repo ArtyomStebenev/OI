@@ -1,10 +1,4 @@
+*/*
 /images
-
-/lab1/.~lock.отчет-лаб1.docx#
-/lab1/отчет-лаб1.docx
-
-/lab1/.~lock.отчет-лаб1.pdf#
-/lab1/отчет-лаб1.pdf
-
-/lab1/.~lock.отчет-лаб1.odg#
-/lab1/отчет-лаб1.odg
+#!lab[1-3]/*.m
+!lab[1-3]/*.pdf
