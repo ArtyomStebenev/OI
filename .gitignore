@@ -1,4 +1,4 @@
 */*
-/images
+/*.pdf
 !lab[1-3]/*.m
 !lab[1-3]/*.pdf
