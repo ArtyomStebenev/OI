@@ -27,6 +27,7 @@ function result_matrix = vector_to_matrix_retrievel(n, R_CONST, f)
   f_alfa = (h1 * get_function_indicator(r_alfa, r1, r2)
          +  h2 * get_function_indicator(r_alfa, r3, r4));
 
+  line = zeros(2*n-1);
   line = [f(end:-1:2) f];
   f_alfa(n, :) = line;
   f_alfa(:, n) = line;
