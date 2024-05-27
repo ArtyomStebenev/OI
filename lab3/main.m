@@ -1,7 +1,7 @@
 #Вариант 7
 
 # Consts
-n = 50;
+n = 500;
 R_CONST = 5;
 step = R_CONST/n;
 
@@ -18,9 +18,9 @@ m = 5;
 r = step .* ([1:n] - 1);
 f = h1 * get_function_indicator(r, r1, r2) + h2 * get_function_indicator(r, r3, r4);
 
-plot(r(1:5:end), abs(f(1:5:end)));
+plot(r(1:5:end), abs(f(1:5:end)), ".r; abs(f(r);");
 figure;
-plot(r(1:5:end), arg(f(1:5:end)));
+plot(r(1:5:end), arg(f(1:5:end)), "-y; arg(f(x));");
 
 
 
@@ -29,4 +29,9 @@ f_alfa_matrix = vector_to_matrix_retrievel(n, R_CONST, f);
 
 figure;
 imagesc(-R_CONST:step:R_CONST-step/2, -R_CONST:step:R_CONST-step/2, abs(f_alfa_matrix));
+title("abs(f(alfa))");
+
+figure;
+imagesc(-R_CONST:step:R_CONST-step/2, -R_CONST:step:R_CONST-step/2, arg(f_alfa_matrix));
+title("arg(f(alfa))");
 
