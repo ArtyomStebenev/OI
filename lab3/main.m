@@ -1,6 +1,6 @@
 #Вариант 7
 
-#All consts
+# Consts
 n = 50;
 R_CONST = 5;
 step = R_CONST/n;
@@ -14,9 +14,19 @@ h2 = 1;
 m = 5;
 
 
-r = step .* ([1:n] - 1); #just variable
-f = h1 * get_Hankel_transform(r, r1, r2) + h2 * get_Hankel_transform(r, r3, r4);
+# 5
+r = step .* ([1:n] - 1);
+f = h1 * get_function_indicator(r, r1, r2) + h2 * get_function_indicator(r, r3, r4);
 
 plot(r(1:5:end), abs(f(1:5:end)));
 figure;
 plot(r(1:5:end), arg(f(1:5:end)));
+
+
+
+# 8
+f_alfa_matrix = vector_to_matrix_retrievel(n, R_CONST, f);
+
+figure;
+imagesc(-R_CONST:step:R_CONST-step/2, -R_CONST:step:R_CONST-step/2, abs(f_alfa_matrix));
+
