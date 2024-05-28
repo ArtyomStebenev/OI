@@ -1,4 +1,5 @@
-plot(x(1:10:end), real(f)(1:10:end), "-g; Re(f(x));");
+plot(x(1:10:end), real(f)(1:10:end), "-g");
+title("Re(f(x))");
 legend("Location", "northeastoutside");
 
 figure;
