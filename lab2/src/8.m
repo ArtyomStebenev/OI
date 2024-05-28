@@ -11,8 +11,8 @@ Kernel = exp(-i * 2 * pi * X .* Z);
 
 
 imagesc(x, z, abs(Kernel));
+title("Abs(Kernel)");
 figure;
 imagesc(x, z, arg(Kernel));
-
-
+title("Arg(Kernel)");
 
